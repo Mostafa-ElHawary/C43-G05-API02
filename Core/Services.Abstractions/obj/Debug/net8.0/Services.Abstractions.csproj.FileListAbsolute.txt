@@ -1,0 +1,15 @@
+C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\bin\Debug\net8.0\Services.Abstractions.deps.json
+C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\bin\Debug\net8.0\Services.Abstractions.dll
+C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\bin\Debug\net8.0\Services.Abstractions.pdb
+C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\bin\Debug\net8.0\Shared.dll
+C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\bin\Debug\net8.0\Shared.pdb
+C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\obj\Debug\net8.0\Services.Abstractions.csproj.AssemblyReference.cache
+C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\obj\Debug\net8.0\Services.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\obj\Debug\net8.0\Services.Abstractions.AssemblyInfoInputs.cache
+C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\obj\Debug\net8.0\Services.Abstractions.AssemblyInfo.cs
+C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\obj\Debug\net8.0\Services.Abstractions.csproj.CoreCompileInputs.cache
+C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\obj\Debug\net8.0\Services.E74F1EB6.Up2Date
+C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\obj\Debug\net8.0\Services.Abstractions.dll
+C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\obj\Debug\net8.0\refint\Services.Abstractions.dll
+C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\obj\Debug\net8.0\Services.Abstractions.pdb
+C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\obj\Debug\net8.0\ref\Services.Abstractions.dll

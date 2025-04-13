@@ -1,0 +1,11 @@
+C:\Users\welcome\source\repos\Store.G02\Shared\bin\Debug\net8.0\Shared.deps.json
+C:\Users\welcome\source\repos\Store.G02\Shared\bin\Debug\net8.0\Shared.dll
+C:\Users\welcome\source\repos\Store.G02\Shared\bin\Debug\net8.0\Shared.pdb
+C:\Users\welcome\source\repos\Store.G02\Shared\obj\Debug\net8.0\Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\welcome\source\repos\Store.G02\Shared\obj\Debug\net8.0\Shared.AssemblyInfoInputs.cache
+C:\Users\welcome\source\repos\Store.G02\Shared\obj\Debug\net8.0\Shared.AssemblyInfo.cs
+C:\Users\welcome\source\repos\Store.G02\Shared\obj\Debug\net8.0\Shared.csproj.CoreCompileInputs.cache
+C:\Users\welcome\source\repos\Store.G02\Shared\obj\Debug\net8.0\Shared.dll
+C:\Users\welcome\source\repos\Store.G02\Shared\obj\Debug\net8.0\refint\Shared.dll
+C:\Users\welcome\source\repos\Store.G02\Shared\obj\Debug\net8.0\Shared.pdb
+C:\Users\welcome\source\repos\Store.G02\Shared\obj\Debug\net8.0\ref\Shared.dll

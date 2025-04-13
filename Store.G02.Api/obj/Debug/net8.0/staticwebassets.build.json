@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "C1dxlViZVDWcRuJfXuzQ3mxoI7vBG2REkzeRy91GRSA=",
+  "Source": "Store.G02.Api",
+  "BasePath": "_content/Store.G02.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
