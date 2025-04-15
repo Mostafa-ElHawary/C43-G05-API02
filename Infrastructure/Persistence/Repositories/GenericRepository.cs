@@ -16,13 +16,13 @@ namespace Persistence.Repositories
         private readonly StoreDbContext _context;
         public GenericRepository(StoreDbContext context)
         {
-            _context = context; 
+            _context = context;
         }
 
 
         public async Task<IEnumerable<TEntity>> GetAllAsync(bool trackChanges = false)
         {
-            if(typeof(TEntity) == typeof(Product))
+            if (typeof(TEntity) == typeof(Product))
             {
                 //var products = await _context.Set<TEntity>().ToListAsync();
                 return trackChanges ?
@@ -47,12 +47,12 @@ namespace Persistence.Repositories
                 return await _context.Products.Include(P => P.ProductBrand).Include(P => P.ProductType)
                     .FirstOrDefaultAsync(p => p.Id == id as int?) as TEntity;
 
-            }   
+            }
             return await _context.Set<TEntity>().FindAsync(id);
         }
         public async Task AddAsync(TEntity entity)
         {
-             await _context.AddAsync(entity);
+            await _context.AddAsync(entity);
         }
 
         public void Update(TEntity entity)
@@ -62,6 +62,22 @@ namespace Persistence.Repositories
         public void Delete(TEntity entity)
         {
             _context.Remove(entity);
+        }
+
+        // Dynamic Specification query
+        public async Task<IEnumerable<TEntity>> GetAllAsync(ISpecification<TEntity, T> spec, bool trackChanges = false)
+        {
+            return await ApplySpecification(spec).ToListAsync();
+        }
+
+        public async Task<TEntity?> GetAsync(ISpecification<TEntity, T> spec)
+        {
+            return await ApplySpecification(spec).FirstOrDefaultAsync();
+        }
+
+        private IQueryable<TEntity> ApplySpecification(ISpecification<TEntity, T> spec)
+        {
+            return SpecificationEvaluator.GetQuery(_context.Set<TEntity>(), spec);
         }
     }
 }

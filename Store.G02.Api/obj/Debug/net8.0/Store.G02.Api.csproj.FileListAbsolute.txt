@@ -159,3 +159,5 @@ C:\Users\welcome\source\repos\Store.G02\Store.G02.Api\obj\Debug\net8.0\ref\Store
 C:\Users\welcome\source\repos\Store.G02\Store.G02.Api\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\welcome\source\repos\Store.G02\Store.G02.Api\bin\Debug\net8.0\Services.dll
 C:\Users\welcome\source\repos\Store.G02\Store.G02.Api\bin\Debug\net8.0\Services.pdb
+C:\Users\welcome\source\repos\Store.G02\Store.G02.Api\bin\Debug\net8.0\Store.G02.Api.staticwebassets.runtime.json
+C:\Users\welcome\source\repos\Store.G02\Store.G02.Api\obj\Debug\net8.0\Store.G02.Api.sourcelink.json

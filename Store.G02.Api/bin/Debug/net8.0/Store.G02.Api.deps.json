@@ -999,6 +999,7 @@
         "dependencies": {
           "AutoMapper": "14.0.0",
           "Domain": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
           "Services.Abstractions": "1.0.0"
         },
         "runtime": {

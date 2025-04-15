@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Xja4JZTe20I=",
+  "dgSpecHash": "em/NXgTYeR4=",
   "success": true,
   "projectFilePath": "C:\\Users\\welcome\\source\\repos\\Store.G02\\Core\\Services\\Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\welcome\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
+    "C:\\Users\\welcome\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\welcome\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\welcome\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
     "C:\\Users\\welcome\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
