@@ -14,11 +14,18 @@ namespace Domain.Contracts
         Expression<Func<TEntity, bool>>? Criteria { get; set; }
         List<Expression<Func<TEntity, object>>> IncludeExpressions { get; set; }
 
-        //Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? OrderBy { get; }
-        //Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? OrderByDescending { get; }
+        Expression<Func<TEntity, object>>? OrderBy { get; set; }
+        Expression<Func<TEntity, object>>? OrderByDescending { get; set; }
 
-        //int? Take { get; }
-        //int? Skip { get; }
+        int Take { get; set; }
+        int Skip { get; set; }
+
+        bool IsPagination { get; set; }
+
+        //Expression<Func<TEntity, object>>? GroupBy { get; set; }
+        //Expression<Func<TEntity, object>>? Select { get; set; }
+        //int Count { get; set; }
+        ////bool IsReadOnly { get; set; }
 
 
     }

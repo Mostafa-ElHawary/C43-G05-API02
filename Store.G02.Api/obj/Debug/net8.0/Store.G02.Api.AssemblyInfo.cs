@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Store.G02.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc6a0f4699daf61aacdb7fe1b113baf02399cb63")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0691159495347b90192eaeef9871313ec980b889")]
 [assembly: System.Reflection.AssemblyProductAttribute("Store.G02.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Store.G02.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

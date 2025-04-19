@@ -9,11 +9,16 @@ using Domain.Models;
 
 namespace Services.Specifications
 {
-    public class BaseSpecification<TEntity, T> : ISpecification<TEntity,T>
+    public class BaseSpecification<TEntity, T> : ISpecification<TEntity, T>
         where TEntity : BaseEntity<T>
     {
         public Expression<Func<TEntity, bool>>? Criteria { get; set; }
         public List<Expression<Func<TEntity, object>>> IncludeExpressions { get ; set; } = new List<Expression<Func<TEntity, object>>>();
+        public Expression<Func<TEntity, object>>? OrderBy { get; set ; }
+        public Expression<Func<TEntity, object>>? OrderByDescending { get ; set ; }
+        public int Take { get; set; }
+        public int Skip { get; set ; }
+        public bool IsPagination { get ; set ; }
 
         public BaseSpecification(Expression<Func<TEntity,bool>>? expression)
         {
@@ -23,6 +28,23 @@ namespace Services.Specifications
         protected void AddInclude(Expression<Func<TEntity, object>> expression)
         {
             IncludeExpressions.Add(expression);
+        }
+
+        protected void AddOrderBy(Expression<Func<TEntity, object>> expression)
+        {
+            OrderBy = expression;
+        }
+
+        protected void AddOrderByDescending(Expression<Func<TEntity, object>> expression)
+        {
+            OrderByDescending = expression;
+        }
+
+        protected void ApplyPagination(int pageIndex, int pageSize)
+        {
+            Skip = (pageIndex -1 * pageSize);
+            Take = pageSize;
+            IsPagination = true;
         }
 
     }

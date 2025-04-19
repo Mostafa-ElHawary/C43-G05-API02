@@ -5,25 +5,26 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Services.Abstractions;
+using Shared;
 
 namespace Presentation
 {
 
     [ApiController]
     [Route("api/[controller]")]
-    public class ProductsController(IServiceManager serviceManager) :ControllerBase
+    public class ProductsController(IServiceManager serviceManager) : ControllerBase
     {
 
         [HttpGet]
-        public async Task<IActionResult> GetAllProducts()
+        public async Task<IActionResult> GetAllProducts([FromQuery]ProductSpecificationsParamters SpecParams)
         {
             // Call the service to get all products
-             var products = await serviceManager.ProductService.GetAllProductAsync();
-            if(products == null)
+            var products = await serviceManager.ProductService.GetAllProductAsync(SpecParams);
+            if (products == null)
             {
                 return BadRequest();
             }
-             return Ok(products);
+            return Ok(products);
             //return Ok();
         }
 

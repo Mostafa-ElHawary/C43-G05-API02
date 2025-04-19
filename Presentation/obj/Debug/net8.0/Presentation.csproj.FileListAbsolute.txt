@@ -15,3 +15,4 @@ C:\Users\welcome\source\repos\Store.G02\Presentation\obj\Debug\net8.0\Presentati
 C:\Users\welcome\source\repos\Store.G02\Presentation\obj\Debug\net8.0\refint\Presentation.dll
 C:\Users\welcome\source\repos\Store.G02\Presentation\obj\Debug\net8.0\Presentation.pdb
 C:\Users\welcome\source\repos\Store.G02\Presentation\obj\Debug\net8.0\ref\Presentation.dll
+C:\Users\welcome\source\repos\Store.G02\Presentation\obj\Debug\net8.0\Presentation.sourcelink.json

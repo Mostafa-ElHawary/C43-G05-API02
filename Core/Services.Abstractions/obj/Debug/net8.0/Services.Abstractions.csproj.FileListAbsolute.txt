@@ -13,3 +13,4 @@ C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\obj\Debug\net
 C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\obj\Debug\net8.0\refint\Services.Abstractions.dll
 C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\obj\Debug\net8.0\Services.Abstractions.pdb
 C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\obj\Debug\net8.0\ref\Services.Abstractions.dll
+C:\Users\welcome\source\repos\Store.G02\Core\Services.Abstractions\obj\Debug\net8.0\Services.Abstractions.sourcelink.json
