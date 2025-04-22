@@ -9,9 +9,7 @@ namespace Domain.Contracts
 {
     public interface IUnitOfWork
     {
-        //IProductRepository Products { get; }
-        //IProductTypeRepository ProductTypes { get; }
-        //IProductBrandRepository ProductBrands { get; }
+        
         Task<int> SaveChangesAsync();
 
         IGenericRepository<TEntity, T> GetRepository<TEntity, T>() where TEntity : BaseEntity<T>;

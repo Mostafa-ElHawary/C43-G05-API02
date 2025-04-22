@@ -10,7 +10,7 @@ namespace Shared
     {
         public int? BrandId { get; set; }
         public int? TypeId { get; set; }
-        public string? Sort { get; set; } = "name";
+        public string? Sort { get; set; }
         private int _PageIndex = 1;
         private int _PageSize  = 5;
 

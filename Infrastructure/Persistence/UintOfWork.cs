@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,26 +15,19 @@ namespace Persistence
     {
 
         private readonly StoreDbContext _context;
-        private readonly Dictionary<string, object> _repositories;
+        //private readonly Dictionary<string, object> _repositories;
+        private readonly ConcurrentDictionary<string, object> _repositories;
         public UnitOfWork(StoreDbContext context)
         {
             _context = context;
-            _repositories = new Dictionary<string, object>();
+            //_repositories = new Dictionary<string, object>();
+            _repositories = new ConcurrentDictionary<string, object>();
+
         }
         public IGenericRepository<TEntity, T> GetRepository<TEntity, T>() where TEntity : BaseEntity<T>
-        {
-            //return new GenericRepository<TEntity, T>(_context); 
-            var type = typeof(TEntity).Name;
-            if (!_repositories.ContainsKey(type))
-            {
-                var repository = new GenericRepository<TEntity, T>(_context);
-                _repositories.Add(type, repository);
-                //return repository;
-            }
+        => (IGenericRepository<TEntity, T>) _repositories.GetOrAdd(typeof(TEntity).Name, new GenericRepository<TEntity, T>(_context));
 
-            return (IGenericRepository<TEntity, T>)_repositories[type];
-
-        }
+        
         public async Task<int> SaveChangesAsync()
         {
             return await _context.SaveChangesAsync();

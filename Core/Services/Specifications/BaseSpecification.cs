@@ -42,8 +42,8 @@ namespace Services.Specifications
 
         protected void ApplyPagination(int pageIndex, int pageSize)
         {
-            Skip = (pageIndex -1 * pageSize);
             Take = pageSize;
+            Skip = (pageIndex -1) * pageSize;
             IsPagination = true;
         }
 

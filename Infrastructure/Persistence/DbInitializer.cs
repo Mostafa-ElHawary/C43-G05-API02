@@ -11,7 +11,7 @@ using Persistence.Data;
 
 namespace Persistence
 {
-    public class DbInitializer : IDbInitializer
+    public class  DbInitializer : IDbInitializer
     {
         private readonly StoreDbContext _context;
         public DbInitializer(StoreDbContext context) {
@@ -34,7 +34,7 @@ namespace Persistence
                     var types = JsonSerializer.Deserialize<List<ProductType>>(typesData);
                     if (types != null && types.Any())
                     {
-                        _context.ProductTypes.AddRange(types);
+                         _context.ProductTypes.AddRange(types);
                         await _context.SaveChangesAsync();
                     }
 
@@ -48,7 +48,7 @@ namespace Persistence
                     var Brands = JsonSerializer.Deserialize<List<ProductBrand>>(BrandsData);
                     if (Brands != null && Brands.Any())
                     {
-                        _context.ProductBrands.AddRange(Brands);
+                         _context.ProductBrands.AddRange(Brands);
                         await _context.SaveChangesAsync();
                     }
 
@@ -62,7 +62,7 @@ namespace Persistence
                     var Products = JsonSerializer.Deserialize<List<Product>>(ProductsData);
                     if (Products != null && Products.Any())
                     {
-                        _context.Products.AddRange(Products);
+                         _context.Products.AddRange(Products);
                         await _context.SaveChangesAsync();
                     }
 
