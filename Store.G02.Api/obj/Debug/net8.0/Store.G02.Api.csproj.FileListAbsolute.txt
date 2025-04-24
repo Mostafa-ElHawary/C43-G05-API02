@@ -161,3 +161,5 @@ C:\Users\welcome\source\repos\Store.G02\Store.G02.Api\bin\Debug\net8.0\Services.
 C:\Users\welcome\source\repos\Store.G02\Store.G02.Api\bin\Debug\net8.0\Services.pdb
 C:\Users\welcome\source\repos\Store.G02\Store.G02.Api\bin\Debug\net8.0\Store.G02.Api.staticwebassets.runtime.json
 C:\Users\welcome\source\repos\Store.G02\Store.G02.Api\obj\Debug\net8.0\Store.G02.Api.sourcelink.json
+C:\Users\welcome\source\repos\Store.G02\Store.G02.Api\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\welcome\source\repos\Store.G02\Store.G02.Api\bin\Debug\net8.0\StackExchange.Redis.dll

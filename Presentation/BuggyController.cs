@@ -21,7 +21,7 @@ namespace Presentation
         public IActionResult GetServerErrorRequest()
         {
             throw new Exception();
-                return Ok();
+            return Ok();
         }
 
         [HttpGet(template:"badrequest")]

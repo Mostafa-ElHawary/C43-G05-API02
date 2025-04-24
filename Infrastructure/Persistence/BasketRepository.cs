@@ -32,8 +32,8 @@ namespace Persistence
         public async Task<CustomerBasket> UpdateBasketAsync(CustomerBasket basket, TimeSpan? timeToLive = null)
         {
             // update logic
-           var JsonBasket = JsonSerializer.Serialize(basket);
-          var  flag = await   _database.StringSetAsync(basket.Id, JsonBasket, TimeSpan.FromDays(30);
+            var JsonBasket = JsonSerializer.Serialize(basket);
+            var flag = await _database.StringSetAsync(basket.Id, JsonBasket, TimeSpan.FromDays(30));
             return flag ? await GetBasketAsync(basket.Id) : null;
         }
     }

@@ -25,7 +25,7 @@ namespace Store.G02.Api.MiddleWares
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Somthing Went Wong");
+                _logger.LogError(ex, "Something Went Wong !");
                 await HandleExcpetionAsync(context, ex);
 
             }

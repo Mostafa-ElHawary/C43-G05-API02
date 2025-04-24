@@ -18,6 +18,5 @@ namespace Services.MappingProfiles
 
         }
     }
-    {
-    }
+
 }

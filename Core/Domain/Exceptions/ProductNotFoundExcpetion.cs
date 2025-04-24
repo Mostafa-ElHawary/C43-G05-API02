@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Domain.Exceptions
 {
     public sealed class ProductNotFoundExcpetion(int id) 
-        : NotFoundExcpetion($"Product with id {id} not found")
+        : NotFoundExcpetion($"Product with id {id} is not found")
     {
     }
 }

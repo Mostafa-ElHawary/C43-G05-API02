@@ -45,25 +45,25 @@ namespace Store.G02.Api.Extensions
 
             services.Configure<ApiBehaviorOptions>(config =>
 
-    config.InvalidModelStateResponseFactory = context =>
-    {
-        var errors = context.ModelState
-            .Where(e => e.Value.Errors.Any())
-            .Select(x => new ValidationErrors()
+            config.InvalidModelStateResponseFactory = context =>
             {
-                Field = x.Key,
-                Errors = x.Value.Errors.Select(e => e.ErrorMessage)
+                var errors = context.ModelState
+                    .Where(e => e.Value.Errors.Any())
+                    .Select(x => new ValidationErrors()
+                    {
+                        Field = x.Key,
+                        Errors = x.Value.Errors.Select(e => e.ErrorMessage)
 
-            });
-        //.Select(x => x.ErrorMessage).ToArray();
-        var errorResponse = new ValidationErrorResponse()
-        {
-            Errors = errors
-        };
-        return new BadRequestObjectResult(errorResponse);
-    }
+                    });
+                //.Select(x => x.ErrorMessage).ToArray();
+                var errorResponse = new ValidationErrorResponse()
+                {
+                    Errors = errors
+                };
+                return new BadRequestObjectResult(errorResponse);
+            }
 
-    );
+            );
 
 
             return services;

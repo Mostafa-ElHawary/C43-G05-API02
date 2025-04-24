@@ -23,7 +23,6 @@ namespace Store.G02.Api
             // Add services to the container.
 
 
-
             builder.Services.RegisterAllApplicationService(builder.Configuration);
             
     

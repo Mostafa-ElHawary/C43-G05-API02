@@ -27,8 +27,8 @@ namespace Persistence
                     return ConnectionMultiplexer.Connect(Configuration.GetConnectionString("Redis")!);
                 }
                 );
-            services.AddScoped<IBasketRepository, IBasketRepository>();
-
+            //services.AddScoped<IBasketRepository, IBasketRepository>();
+            services.AddScoped<IBasketRepository, BasketRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             return services;
         }
