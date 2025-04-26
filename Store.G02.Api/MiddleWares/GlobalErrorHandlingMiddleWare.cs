@@ -45,6 +45,10 @@ namespace Store.G02.Api.MiddleWares
             response.StatusCode = ex switch
             {
                 NotFoundExcpetion => StatusCodes.Status404NotFound,
+                BadRequestExceptions => StatusCodes.Status400BadRequest,
+                UnAuthorizedException => StatusCodes.Status401Unauthorized,
+
+                ValidationExceptions => HandleValidationExceptionAsync((ValidationExceptions)ex ,response),
                 _ => StatusCodes.Status500InternalServerError,
             };
             context.Response.StatusCode = response.StatusCode;
@@ -60,6 +64,12 @@ namespace Store.G02.Api.MiddleWares
                 ErrorMessage = $"EndPoint {context.Request.Path} Not Found"
             };
             await context.Response.WriteAsJsonAsync(response);
+        }
+
+        private static int HandleValidationExceptionAsync(ValidationExceptions ex , ErrorDetails response)
+        {
+            response.Errors = ex.Errors;
+            return StatusCodes.Status400BadRequest;
         }
     }
 }

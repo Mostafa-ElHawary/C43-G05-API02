@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "Presentation.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Shared.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentation.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Shared.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Presentation.BasketController",
     "Method": "UpdateBasket",
     "RelativePath": "api/Basket",
@@ -17,25 +49,25 @@
   },
   {
     "ContainingType": "Presentation.BasketController",
-    "Method": "GetBasketById",
-    "RelativePath": "api/Basket/{id}",
-    "HttpMethod": "GET",
+    "Method": "DeleteBasket",
+    "RelativePath": "api/Basket",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
   },
   {
     "ContainingType": "Presentation.BasketController",
-    "Method": "DeleteBasket",
+    "Method": "GetBasketById",
     "RelativePath": "api/Basket/{id}",
-    "HttpMethod": "DELETE",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [

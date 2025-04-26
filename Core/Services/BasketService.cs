@@ -22,20 +22,22 @@ namespace Services
             return basketDto;
 
         }
-        public async Task<bool> DeleteBasketAsync(string id)
-        {
-           var flag = await basketRepository.DeleteBasketAsync(id); 
-            return flag;    
-        }
-
-
         public async Task<BasketDto?> UpdateBasketAsync(BasketDto basket)
 
         {
             var basketDto = mapper.Map<CustomerBasket>(basket);
-           var  customerBasket = await basketRepository.UpdateBasketAsync(basketDto);
-            if (customerBasket is null) throw new Exception($"Can't Update Or Create Basket {basket.Id}");
-            return mapper.Map<BasketDto>(customerBasket); 
+            var customerBasket = await basketRepository.UpdateBasketAsync(basketDto);
+            if (customerBasket is null) throw new BasketCreateOrUpdateBadRequestException();
+            return mapper.Map<BasketDto>(customerBasket);
+        }    
+        public async Task<bool> DeleteBasketAsync(string id)
+        {
+           var flag = await basketRepository.DeleteBasketAsync(id); 
+            if(flag == false) throw new BasketDeleteBadRequestException();
+            return flag;    
         }
+
+
+  
     }
 }

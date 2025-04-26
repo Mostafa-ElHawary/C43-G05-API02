@@ -24,15 +24,15 @@ namespace Store.G02.Api
 
 
             builder.Services.RegisterAllApplicationService(builder.Configuration);
-            
-    
+
+
             var app = builder.Build();
 
 
-          await  app.ConfigureMiddleWares();
+            await app.ConfigureMiddleWares();
             app.Run();
         }
 
-        
+
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Presentation.Attributes;
 using Services.Abstractions;
 using Shared;
 using Shared.ErrorModels;
@@ -18,10 +19,11 @@ namespace Presentation
     {
 
         [HttpGet]
-        [ProducesResponseType<ProductResultDto>(StatusCodes.Status200OK,Type = typeof(PaginationResponse<ProductResultDto>))]
+        [ProducesResponseType<ProductResultDto>(StatusCodes.Status200OK, Type = typeof(PaginationResponse<ProductResultDto>))]
         [ProducesResponseType<ValidationErrorResponse>(StatusCodes.Status400BadRequest, Type = typeof(ValidationErrorResponse))]
         [ProducesResponseType<ErrorDetails>(StatusCodes.Status500InternalServerError, Type = typeof(ErrorDetails))]
-        public async Task<ActionResult<PaginationResponse<ProductResultDto>>> GetAllProducts([FromQuery]ProductSpecificationsParamters SpecParams)
+        [Cache(100)]
+        public async Task<ActionResult<PaginationResponse<ProductResultDto>>> GetAllProducts([FromQuery] ProductSpecificationsParamters SpecParams)
         {
             // Call the service to get all products
             var products = await serviceManager.ProductService.GetAllProductAsync(SpecParams);
@@ -37,7 +39,7 @@ namespace Presentation
         [ProducesResponseType<ProductResultDto>(StatusCodes.Status200OK, Type = typeof(ProductResultDto))]
         [ProducesResponseType<ValidationErrorResponse>(StatusCodes.Status400BadRequest, Type = typeof(ValidationErrorResponse))]
         [ProducesResponseType<ErrorDetails>(StatusCodes.Status500InternalServerError, Type = typeof(ErrorDetails))]
-        [ProducesResponseType<ErrorDetails>(StatusCodes.Status404NotFound,Type = typeof(ErrorDetails))]
+        [ProducesResponseType<ErrorDetails>(StatusCodes.Status404NotFound, Type = typeof(ErrorDetails))]
 
         public async Task<ActionResult<ProductResultDto>> GetProductById(int id)
         {

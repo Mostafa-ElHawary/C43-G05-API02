@@ -1,6 +1,9 @@
 ﻿using Domain.Contracts;
+using Domain.Models.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Persistence;
+using Persistence.Identity;
 using Services;
 using Shared.ErrorModels;
 using Store.G02.Api.MiddleWares;
@@ -11,13 +14,12 @@ namespace Store.G02.Api.Extensions
     {
         public static IServiceCollection RegisterAllApplicationService(this IServiceCollection services, IConfiguration Configuration)
         {
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-
 
             services.AddBuiltInServices();
             services.AddSwaggerServices();
             services.ConfigurServices();
             services.AddInfrastructureServices(Configuration);
+            services.AddIdentityServices();
             services.AddApplicationServices();
 
             return services;
@@ -27,6 +29,15 @@ namespace Store.G02.Api.Extensions
         {
 
             services.AddControllers();
+            return services;
+
+        }
+
+        private static IServiceCollection AddIdentityServices(this IServiceCollection services)
+        {
+
+            services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<StoreIdentityDbContext>();
+               
             return services;
 
         }
@@ -77,7 +88,7 @@ namespace Store.G02.Api.Extensions
 
             #region Seeding
 
-       await   app.InitializeDatabaseAsync();
+              await   app.InitializeDatabaseAsync();
 
             #endregion
 
@@ -107,6 +118,8 @@ namespace Store.G02.Api.Extensions
             using var scope = app.Services.CreateScope();
             var dbInitializer = scope.ServiceProvider.GetRequiredService<IDbInitializer>();
             await dbInitializer.InitializeAsync();
+
+            await dbInitializer.InitializeIdentityAsync();
             return app;
         }
 

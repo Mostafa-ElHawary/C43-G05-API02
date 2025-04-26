@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Services.Abstractions;
 using Shared;
 
-namespace Presentation
+namespace Presentation 
 {
     [ApiController]
     [Route("api/[controller]")]
@@ -27,7 +27,7 @@ namespace Presentation
           
             return Ok(updatedBasket);
         }
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public async Task<ActionResult> DeleteBasket(string id)
         {
             var result = await service.BasketService.DeleteBasketAsync(id);
