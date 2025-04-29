@@ -26,10 +26,7 @@ namespace Presentation.Attributes
                   StatusCode = StatusCodes.Status200OK,
                   Content = result
               };
-                // Set the cache value
-                //var cacheDuration = TimeSpan.FromMinutes(5); // Set your desired cache duration
-                //await cacheService.SetCacheValueAsync(cacheKey, result, cacheDuration);
-                //await next(); // Proceed to the action method
+              
                 return;
             }
          var contextResult =   await next.Invoke();

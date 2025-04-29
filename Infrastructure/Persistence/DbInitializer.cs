@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Domain.Contracts;
 using Domain.Models;
 using Domain.Models.Identity;
+using Domain.Models.OrderModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Data;
@@ -62,7 +63,7 @@ namespace Persistence
                     var Brands = JsonSerializer.Deserialize<List<ProductBrand>>(BrandsData);
                     if (Brands != null && Brands.Any())
                     {
-                         _context.ProductBrands.AddRange(Brands);
+                        await _context.ProductBrands.AddRangeAsync(Brands);
                         await _context.SaveChangesAsync();
                     }
 
@@ -76,7 +77,22 @@ namespace Persistence
                     var Products = JsonSerializer.Deserialize<List<Product>>(ProductsData);
                     if (Products != null && Products.Any())
                     {
-                         _context.Products.AddRange(Products);
+                        await _context.Products.AddRangeAsync(Products);
+                        await _context.SaveChangesAsync();
+                    }
+
+                }
+
+                if (!_context.DeliveryMethods.Any())
+                {
+
+                   
+                    var DeliveryData = await File.ReadAllTextAsync(@"..\Infrastructure\Persistence\Data\Seeding\delivery.json");
+                   
+                    var DeliveryMethods = JsonSerializer.Deserialize<List<DeliveryMethod>>(DeliveryData);
+                    if (DeliveryMethods != null && DeliveryMethods.Any())
+                    {
+                       await _context.DeliveryMethods.AddRangeAsync(DeliveryMethods);
                         await _context.SaveChangesAsync();
                     }
 

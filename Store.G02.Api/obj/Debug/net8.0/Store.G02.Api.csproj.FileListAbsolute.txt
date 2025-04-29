@@ -168,3 +168,4 @@ C:\Users\welcome\source\repos\Store.G02\Store.G02.Api\bin\Debug\net8.0\Microsoft
 C:\Users\welcome\source\repos\Store.G02\Store.G02.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\welcome\source\repos\Store.G02\Store.G02.Api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\welcome\source\repos\Store.G02\Store.G02.Api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\welcome\source\repos\Store.G02\Store.G02.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

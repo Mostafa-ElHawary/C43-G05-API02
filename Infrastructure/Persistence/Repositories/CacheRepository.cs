@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 using Domain.Contracts;
 using Microsoft.EntityFrameworkCore.Storage;
 using StackExchange.Redis;
+using IDatabase = StackExchange.Redis.IDatabase;
 namespace Persistence.Repositories
 {
     public class CacheRepository(IConnectionMultiplexer connection) : ICacheRepository
     {
-        private readonly StackExchange.Redis.IDatabase _database = connection.GetDatabase();
+        private readonly IDatabase _database = connection.GetDatabase();
         public async Task<string?> GetAsync(string key)
         {
           var value = await  _database.StringGetAsync(key);
